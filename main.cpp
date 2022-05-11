@@ -43,26 +43,10 @@ int main() {
 
                 // Making sure an IndexError don't occur, by making the canvas borderless
                 int widthLeft, widthRight, heightTop, heightBottom;
-                if (i == 0) {
-                    widthLeft = 199;
-                } else {
-                    widthLeft = i - 1;
-                }
-                if (i == 199) {
-                    widthRight = 0;
-                } else {
-                    widthRight = i + 1;
-                }
-                if (j == 0) {
-                    heightTop = 149;
-                } else {
-                    heightTop = j - 1;
-                }
-                if (j == 149) {
-                    heightBottom = 0;
-                } else {
-                    heightBottom = j + 1;
-                }
+                widthLeft = (i == 0) ? 199 : i - 1;
+                widthRight = (i == 199) ? 0 : i + 1;
+                heightTop = (j == 0) ? 149 : j - 1;
+                heightBottom = (j == 149) ? 0 : j + 1;
 
                 // Defining the neighbours
                 int neighbours[8] = {
